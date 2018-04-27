@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NotificationFramework
 {
-    public interface INotification
+    public interface INotificationAttachment
     {
-        INotificationContent Content { get; }
+        string Name { get; }
 
-        ICollection<INotificationDelivery> Deliveries { get; }
+        Stream Data { get; }
     }
 }

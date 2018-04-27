@@ -5,13 +5,14 @@ namespace NotificationFramework
 {
     public interface INotificationDelivery
     {
-        ICollection<INotificationRecipient> Recipients { get; }
+        ICollection<INotificationContact> Recipients { get; }
+
         DateTimeOffset ScheduledDeliveryTime { get; }
 
-        DateTimeOffset ActualDeliveryTime { get; }
+        DateTimeOffset? ActualDeliveryTime { get; }
 
         int? MaxAttempts { get; } 
 
-        IEnumerable<INotificationDeliveryAttempt> DeliveryAttempts { get; }
+        ICollection<INotificationDeliveryAttempt> DeliveryAttempts { get; }
     }
 }
