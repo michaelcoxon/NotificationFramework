@@ -5,9 +5,15 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationFramework", "NotificationFramework\NotificationFramework.csproj", "{3241A95D-810C-446E-B671-34517690DBFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationFramework.UnitTests", "NotificationFramework.UnitTests\NotificationFramework.UnitTests.csproj", "{2A8F6EA5-BB44-4606-8127-2DFB2C35D1AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationFramework.UnitTests", "NotificationFramework.UnitTests\NotificationFramework.UnitTests.csproj", "{2A8F6EA5-BB44-4606-8127-2DFB2C35D1AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationFramework.Email", "NotificationFramework.Email\NotificationFramework.Email.csproj", "{A28AF4D6-E295-4834-B351-C73E842A8F91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationFramework.Email", "NotificationFramework.Email\NotificationFramework.Email.csproj", "{A28AF4D6-E295-4834-B351-C73E842A8F91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C92ABF61-2DED-4C52-80F9-347E7137AAB9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

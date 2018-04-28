@@ -11,8 +11,12 @@ namespace NotificationFramework
 
         DateTimeOffset? ActualDeliveryTime { get; }
 
+        DateTimeOffset? ViewedTime { get; }
+
+        DateTimeOffset? Dismissed { get; }
+
         int? MaxAttempts { get; } 
 
-        ICollection<INotificationDeliveryAttempt> DeliveryAttempts { get; }
+        ICollection<NotificationDeliveryAttempt> DeliveryAttempts { get; }
     }
 }

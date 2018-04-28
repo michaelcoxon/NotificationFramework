@@ -5,13 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NotificationFramework.Email
+namespace NotificationFramework
 {
     public interface IEmailService
     {
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, Stream content);
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, Stream content, EmailNotificationAttachment[] attachments);
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, EmailNotificationContact[] ccRecipients, Stream content);
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, EmailNotificationContact[] ccRecipients, Stream content, EmailNotificationAttachment[] attachments);
+        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, EmailNotificationContact[] carbonCopyRecipients, EmailNotificationContact[] blindCarbonCopyrecipients, Stream content, NotificationAttachment[] attachments);
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace NotificationFramework.Email
+﻿namespace NotificationFramework
 {
     public sealed class EmailNotificationContact : INotificationContact
     {

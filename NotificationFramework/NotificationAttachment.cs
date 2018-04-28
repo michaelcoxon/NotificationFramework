@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace NotificationFramework.Email
+namespace NotificationFramework
 {
-    public sealed class EmailNotificationAttachment : INotificationAttachment, IDisposable
+    public sealed class NotificationAttachment : IDisposable
     {
         private readonly MemoryStream _data;
 
@@ -22,7 +26,7 @@ namespace NotificationFramework.Email
             }
         }
 
-        public EmailNotificationAttachment(string name, Stream stream)
+        public NotificationAttachment(string name, Stream stream)
         {
             this.Name = name;
 

@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NotificationFramework.Email
+namespace NotificationFramework
 {
-    public interface INotificationDeliveryService
+    public interface INotificationDeliveryService<TNotificationDelivery> where TNotificationDelivery : INotificationDelivery
     {
-        Task DeliverAsync(Notification notification);
-
-        Task<bool> CanDeliverAsync(Notification notification);
+        Task<NotificationDeliveryAttempt> DeliverAsync(Notification notification, TNotificationDelivery notificationDelivery);
     }
 }
