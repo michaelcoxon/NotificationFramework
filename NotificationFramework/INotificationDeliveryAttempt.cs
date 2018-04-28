@@ -10,7 +10,5 @@ namespace NotificationFramework
         NotificationDeliveryResult Result { get; }
 
         string ResultMessage { get; }
-
-        Task DeliverAsync();
     }
 }

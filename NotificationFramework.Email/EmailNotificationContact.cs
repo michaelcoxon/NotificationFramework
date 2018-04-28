@@ -1,13 +1,14 @@
 ﻿namespace NotificationFramework.Email
 {
-    public sealed class EmailNotificationContact
+    public sealed class EmailNotificationContact : INotificationContact
     {
         public string DisplayName { get; }
-        public string EmailAddress { get; }
+        public string Identity { get; }
+        public string EmailAddress => this.Identity;
 
         public EmailNotificationContact(string emailAddress, string displayName = default)
         {
-            this.EmailAddress = emailAddress;
+            this.Identity = emailAddress;
             this.DisplayName = displayName;
         }
     }

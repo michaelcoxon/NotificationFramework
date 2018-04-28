@@ -9,9 +9,6 @@ namespace NotificationFramework.Email
 {
     public interface IEmailDeliveryService
     {
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, Stream content);
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, Stream content, EmailNotificationAttachment[] attachments);
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, EmailNotificationContact[] ccRecipients, Stream content);
-        Task<EmailDeliveryResult> DeliverAsync(EmailNotificationContact sender, EmailNotificationContact[] recipients, EmailNotificationContact[] ccRecipients, Stream content, EmailNotificationAttachment[] attachments);
+        Task<INotificationDeliveryAttempt> DeliverAsync(Notification notification, INotificationDelivery notificationDelivery);
     }
 }
